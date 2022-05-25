@@ -1,0 +1,31 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	padding: 0px 0px;
+	font-weight: 500;
+	font-size: rem(14);
+	line-height: math.div(18, 14);
+	border: 1px solid $mainGreen;
+	border-radius: rem(30);
+	transition: all 0.3s ease 0s;
+	height: rem(40);
+	justify-content: center;
+	align-items: center;
+	flex: 1 0 rem(90);
+	color: $mainGreen;
+	transition: all 0.3s ease 0s;
+	background: $backgroundColor;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: #fff;
+			background: $mainGreenGradient;
+		}
+	}
+
+	&._fw {
+		width: 100%;
+	}
+}

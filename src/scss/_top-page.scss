@@ -1,0 +1,36 @@
+.top-page {
+
+   // .top-page__container
+   &__container {
+      background: #FFFFFF;
+      border: 1px solid #D7D8D9;
+      border-radius: 6px;
+   }
+
+   // .top-page__img
+   &__img {}
+
+   // .top-page__content
+   &__content {}
+}
+
+.top-content {
+
+   // .top-content__bottom
+   &__bottom {}
+
+   // .top-content__title
+   &__title {}
+
+   // .top-content__list
+   &__list {}
+
+   // .top-content__item
+   &__item {}
+
+   // .top-content__link
+   &__link {}
+
+   // .top-content__comment
+   &__comment {}
+}
