@@ -135,8 +135,8 @@
 
 				@media (any-hover: hover) {
 					&:hover {
-						text-decoration: underline;
-						background: #F7F7F7;
+						background: $mainGreenGradient;
+						color: #fff;
 					}
 				}
 			}
