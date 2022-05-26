@@ -17,17 +17,22 @@
 .top-header {
 	position: relative;
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		right: 0;
-		background: url(@img/icons/close.svg) no-repeat;
-		width: rem(22);
-		height: rem(19);
-		margin-right: rem(21);
-		cursor: pointer;
+
+
+	// .top-header__close
+	&__close {
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			background: url(@img/icons/close.svg) no-repeat;
+			width: rem(22);
+			height: rem(19);
+			margin-right: rem(21);
+			cursor: pointer;
+		}
 	}
 
 	// .top-header__list
@@ -127,6 +132,7 @@
 			border-radius: rem(4);
 			overflow: hidden;
 			z-index: 2;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 
 			a {
 				display: block;

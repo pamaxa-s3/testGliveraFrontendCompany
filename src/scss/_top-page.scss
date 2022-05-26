@@ -12,13 +12,22 @@
       display: flex;
       justify-content: space-between;
       filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.101961));
+      margin-bottom: rem(30);
    }
 
    // .top-page__img
-   &__img {}
+   &__img {
+      flex: 0 1 50%;
+      background: #889099 url('../img/top-img.jpg') center no-repeat;
+      background-size: cover;
+
+      img {}
+   }
 
    // .top-page__content
-   &__content {}
+   &__content {
+      flex: 0 1 50%;
+   }
 }
 
 .top-content {
