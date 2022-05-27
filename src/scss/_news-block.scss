@@ -1,31 +1,65 @@
 .news-block {
    flex: 0 1 rem(800);
+   // margin-bottom: rem(118);
 
    // .news-block__title
    &__title {
       font-size: rem(32);
       font-weight: 300;
       line-height: math.div(44, 32);
-      margin-bottom: rem(40);
+      margin-bottom: em(10, 32);
    }
 
    // .news-block__body
    &__body {
       display: flex;
+      flex-direction: column;
+      margin-bottom: rem(40);
    }
 
    // .news-block__card
    &__card {}
+
+   button {
+      display: block;
+      text-transform: uppercase;
+      min-width: rem(260);
+      margin: 0 auto;
+   }
 }
 
 .card-news {
    display: flex;
+   position: relative;
+   padding: rem(30) 0;
+
+   &::after {
+      content: '';
+      height: 1px;
+      width: calc(740 / 800 * 100%);
+      background-color: #EBECED;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+   }
 
    // .card-news__img
-   &__img {}
+   &__img {
+      height: 180px;
+      max-width: rem(280);
+      width: 100%;
+      overflow: hidden;
+
+      img {
+         height: 100%;
+         width: 100%;
+      }
+   }
 
    // .card-news__content
-   &__content {}
+   &__content {
+      padding: 0 rem(50) 0 rem(40);
+   }
 
    // .card-news__text
    &__text {
@@ -33,6 +67,7 @@
       font-weight: 300;
       line-height: math.div(34, 24);
       color: $mainColor;
+      margin-bottom: rem(11);
    }
 
    // .card-news__bottom
@@ -44,18 +79,29 @@
    // .card-news__title
    &__title {
       line-height: math.div(22, 14);
+      margin-bottom: rem(8);
 
       a {
          color: #323642;
+         padding-right: rem(11);
       }
 
       span {
          color: #889099;
       }
+
+      span+span {
+         padding-left: rem(8);
+      }
    }
 
    // .card-news__list
-   &__list {}
+   &__list {
+      margin-bottom: rem(11);
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: rem(5);
+   }
 
    // .card-news__item
    &__item {}
@@ -71,6 +117,11 @@
 
    // .card-news__comment
    &__comment {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      column-gap: rem(13);
+
       span {
          color: #889099;
       }

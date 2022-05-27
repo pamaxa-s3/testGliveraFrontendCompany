@@ -13,3 +13,6 @@ const headerTopBlock = document.querySelector('.header__top');
 closeTop.addEventListener('click', () => {
    headerTopBlock.style.display = 'none';
 })
+
+// тег клоуд
+let tagCloud = require('tag-cloud');
