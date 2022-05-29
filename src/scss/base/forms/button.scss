@@ -29,3 +29,19 @@
 		width: 100%;
 	}
 }
+
+
+.button-green {
+	border: 1px solid $mainGreen;
+	border-radius: rem(30);
+	flex: 1 0 rem(160);
+	color: #fff;
+	background: $mainGreenGradient;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $mainGreen;
+			background: $backgroundColor;
+		}
+	}
+}

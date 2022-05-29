@@ -1,0 +1,238 @@
+.price {
+   padding: rem(100) rem(10) rem(53);
+   background: linear-gradient(135deg, #3D4251 0%, #272B35 100%);
+
+   // .price__container
+   &__container {}
+
+   // .price__title
+   &__title {
+      color: #fff;
+      font-weight: 300;
+      font-size: rem(48);
+      line-height: math.div(64, 48);
+      text-align: center;
+      letter-spacing: -0.5px;
+      margin-bottom: rem(40);
+   }
+
+   // .price__card-block
+   &__card-block {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      column-gap: rem(18);
+      min-height: rem(376);
+      margin-bottom: rem(31);
+   }
+}
+
+.card-price {
+   background: #fff;
+   max-width: rem(380);
+   width: 100%;
+   border: 1px solid #EBECED;
+   border-radius: 6px;
+   padding: rem(48) 0 rem(40);
+   text-align: center;
+   filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.501961));
+   transition: padding 0.3s ease 0s;
+
+   @media (any-hover: hover) {
+      &:hover {
+         padding: rem(59) 0;
+         border: 4px solid $mainGreen;
+         border-radius: 4px;
+
+         .card-price__button {
+            border: 1px solid $mainGreen;
+            border-radius: rem(30);
+            flex: 1 0 rem(160);
+            color: #fff;
+            background: $mainGreenGradient;
+
+            @media (any-hover: hover) {
+               &:hover {
+                  color: $mainGreen;
+                  background: $backgroundColor;
+               }
+            }
+         }
+      }
+   }
+
+   // .card-price__body
+   &__body {}
+
+   // .card-price__title
+   &__title {
+      font-weight: 500;
+      line-height: math.div(18, 14);
+      text-align: center;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #323642;
+      padding-bottom: rem(14);
+      position: relative;
+      margin-bottom: rem(16);
+
+      &::after {
+         content: '';
+         height: 2px;
+         width: rem(24);
+         background: $mainGreen;
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
+
+   // .card-price__cost
+   &__cost {
+      font-weight: 300;
+      font-size: rem(40);
+      line-height: math.div(64, 40);
+      letter-spacing: -1.5px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: rem(19);
+
+      &::after {
+         content: '';
+         height: 1px;
+         width: 100%;
+         background: #EBECED;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+      }
+
+      sup,
+      sub {
+         font-weight: 300;
+         font-size: rem(24);
+         line-height: math.div(32, 24);
+      }
+
+      sup {
+         margin-right: rem(8);
+      }
+
+      sub {
+         margin-left: rem(3);
+      }
+   }
+
+   // .card-price__text
+   &__text {
+      line-height: math.div(22, 14);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      min-height: 79px;
+      row-gap: rem(4);
+      color: #323642;
+
+      span {
+         color: #F24458;
+         margin-right: rem(8);
+         text-decoration: line-through;
+      }
+   }
+
+   // .card-price__save
+
+   &__save {
+      width: 100%;
+      font-weight: 700;
+      line-height: math.div(22, 14);
+   }
+
+   // .card-price__button
+   &__button {
+      width: rem(205);
+   }
+}
+
+.price {
+
+   // .price__pay-block
+   &__pay-block {}
+}
+
+.pay-price {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   column-gap: rem(30);
+   min-height: rem(100);
+
+   // .pay-price__title
+   &__title {
+      font-weight: 300;
+      font-size: rem(18);
+      line-height: math.div(28, 18);
+      color: #FFFFFF;
+   }
+
+   // .pay-price__list
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      column-gap: rem(27);
+      margin-bottom: rem(10);
+   }
+
+   // .pay-price__item
+   &__item {
+      transform: scale(1);
+      transition: transform 0.3s ease 0s;
+
+      @media (any-hover: hover) {
+         &:hover {
+            transform: scale(1.1);
+         }
+      }
+   }
+
+   // .pay-price__link
+   &__link {}
+}
+
+
+// .price__actions
+.price__actions {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   column-gap: rem(40);
+
+   a {
+      font-weight: 500;
+      line-height: math.div(18, 14);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #4CB649;
+      // padding-right: rem(36);
+      display: flex;
+      align-items: center;
+
+      img {
+         margin-left: rem(12);
+      }
+
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+}
