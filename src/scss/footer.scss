@@ -20,19 +20,22 @@
       display: flex;
       justify-content: space-between;
 
+      @media (min-width:$pc) {
+         font-size: rem(50);
+         flex-direction: column;
+      }
    }
 
    // .footer__services
    &__services {
-      min-width: 50%;
-      max-height: 316px;
+      flex: 0 1 50%;
       display: flex;
-      // justify-content: space-between;
+      padding-right: rem(69);
    }
 
    // .footer__info-block
    &__info-block {
-      // flex: 1 1 auto;
+      flex: 0 1 50%;
       display: flex;
       flex-direction: column;
       row-gap: rem(40);
@@ -46,6 +49,9 @@
 }
 
 .services-footer {
+   display: flex;
+   justify-content: space-between;
+   column-gap: rem(15);
 
    // .services-footer__item
    &__item {}
@@ -54,7 +60,7 @@
    &__wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      row-gap: rem(58);
    }
 }
 
@@ -73,13 +79,13 @@
    &__title {}
 
    // .service-footer__list
-   &__list {
-      line-height: math.div(22, 14);
-      color: #889099;
-   }
+   &__list {}
 
    // .service-footer__item
-   &__item {}
+   &__item {
+      line-height: math.div(29, 14);
+      color: #889099;
+   }
 
    // .service-footer__link
    &__link {
@@ -106,6 +112,12 @@
       display: flex;
       flex-direction: column;
       row-gap: rem(14);
+
+      // .about-footer__text--small
+      &--small {
+         font-size: rem(12);
+         line-height: math.div(16, 12);
+      }
    }
 }
 
@@ -117,19 +129,31 @@
    }
 
    // .social-footer__icons
-   &__icons {
+   &__icons_list {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       flex-direction: row;
       column-gap: rem(31);
-   }
-}
+      height: rem(30);
 
-.social-footer__image-ibg {
-   padding-bottom: rem(30);
-   min-width: rem(14);
-   width: max-content;
+      li {
+         transform: scale(1);
+         transition: transform 0.2s ease 0s;
+
+         a {
+            svg {
+               height: rem(30);
+            }
+         }
+
+         @media (any-hover: hover) {
+            &:hover {
+               transform: scale(1.1);
+            }
+         }
+      }
+   }
 }
 
 //====================================================================================================

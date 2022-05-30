@@ -17,17 +17,6 @@
 }
 
 
-._icon-SL .path1:before {
-	content: "\e900";
-	color: rgb(50, 54, 66);
-}
-
-._icon-SL .path2:before {
-	content: "\e901";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-
 ._icon-facebook:before {
 	content: "\e902";
 }
@@ -36,28 +25,6 @@
 	content: "\e903";
 }
 
-._icon-linkedin .path1:before {
-	content: "\e904";
-	color: rgb(50, 54, 66);
-}
-
-._icon-linkedin .path2:before {
-	content: "\e905";
-	margin-left: -1em;
-	color: rgb(255, 255, 255);
-}
-
 ._icon-twitter:before {
 	content: "\e906";
-}
-
-._icon-youtube .path1:before {
-	content: "\e907";
-	color: rgb(50, 54, 66);
-}
-
-._icon-youtube .path2:before {
-	content: "\e908";
-	margin-left: -1.4482421875em;
-	color: rgb(255, 255, 255);
 }

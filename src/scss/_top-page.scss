@@ -59,6 +59,12 @@
 
       a {
          color: #323642;
+
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
       }
 
       span {
@@ -87,6 +93,10 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
       color: $mainGreen !important;
+
+      &:hover {
+         text-decoration: underline;
+      }
    }
 
    // .top-content__comment
