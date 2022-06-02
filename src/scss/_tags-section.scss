@@ -1,4 +1,7 @@
 .tags-section {
+   @media (max-width:$tablet) {
+      display: none;
+   }
 
    // .tags-section__container
    &__container {}

@@ -1,5 +1,7 @@
 .price {
-   padding: rem(100) rem(10) rem(53);
+   padding: rem(0) rem(10);
+   @include adaptiveValue("padding-top", 100, 60);
+   @include adaptiveValue("padding-bottom", 53, 40);
    background: linear-gradient(135deg, #3D4251 0%, #272B35 100%);
 
    // .price__container
@@ -14,6 +16,10 @@
       text-align: center;
       letter-spacing: -0.5px;
       margin-bottom: rem(40);
+
+      @media (max-width:$tablet) {
+         letter-spacing: 0;
+      }
    }
 
    // .price__card-block
@@ -23,21 +29,26 @@
       flex-wrap: wrap;
       align-items: center;
       column-gap: rem(18);
+      row-gap: rem(20);
       min-height: rem(376);
-      margin-bottom: rem(31);
+      @include adaptiveValue("margin-bottom", 31, 36);
    }
 }
 
 .card-price {
    background: #fff;
-   max-width: rem(380);
+   @include adaptiveValue("width", 380, 315);
    width: 100%;
    border: 1px solid #EBECED;
    border-radius: 6px;
    padding: rem(48) 0 rem(40);
    text-align: center;
    filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.501961));
-   transition: padding 0.3s ease 0s;
+
+   @media (min-width:$tablet) {
+      transition: padding 0.3s ease 0s;
+   }
+
 
    @media (any-hover: hover) {
       &:hover {
@@ -45,12 +56,22 @@
          border: 4px solid $mainGreen;
          border-radius: 4px;
 
+         @media (max-width:$tablet) {
+            border-color: #FF8D00;
+            padding: rem(45) 0 rem(37);
+         }
+
          .card-price__button {
             border: 1px solid $mainGreen;
             border-radius: rem(30);
             flex: 1 0 rem(160);
             color: #fff;
             background: $mainGreenGradient;
+
+            @media (max-width:$tablet) {
+               background: linear-gradient(0deg, #FF8D00 3.81%, #FFA400 97.78%);
+               border-color: #FF8D00;
+            }
 
             @media (any-hover: hover) {
                &:hover {
@@ -158,12 +179,6 @@
    }
 }
 
-.price {
-
-   // .price__pay-block
-   &__pay-block {}
-}
-
 .pay-price {
    display: flex;
    justify-content: center;
@@ -188,6 +203,11 @@
       align-items: center;
       column-gap: rem(27);
       margin-bottom: rem(10);
+
+      @media (max-width:$tablet) {
+         margin-bottom: rem(40);
+         row-gap: rem(10);
+      }
    }
 
    // .pay-price__item
@@ -206,7 +226,6 @@
    &__link {}
 }
 
-
 // .price__actions
 .price__actions {
    display: flex;
@@ -214,6 +233,7 @@
    justify-content: center;
    align-items: center;
    column-gap: rem(40);
+   row-gap: rem(36);
 
    a {
       font-weight: 500;

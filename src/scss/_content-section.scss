@@ -1,4 +1,8 @@
 .content-section__body {
    display: flex;
-   margin-bottom: rem(73);
+   @include adaptiveValue("margin-bottom", 73, 70);
+
+   @media (max-width:$tablet) {
+      flex-wrap: wrap;
+   }
 }

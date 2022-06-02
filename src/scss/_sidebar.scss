@@ -1,8 +1,24 @@
 .sidebar {
-   max-width: rem(400);
+   @include adaptiveValue("max-width", 400, 315);
+   @include adaptiveValue("padding-top", 100, 50);
+   @include adaptiveValue("padding-left", 60, 20);
    padding-top: rem(100);
    padding-left: rem(60);
    position: relative;
+
+   @media (max-width:$pc) {
+      @include adaptiveValue("max-width", 300, 250);
+      @include adaptiveValue("padding-left", 40, 20);
+   }
+
+   @media (max-width:$tablet) {
+      @include adaptiveValue("padding-top", 70, 60);
+      max-width: 100%;
+      flex: 1 1 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: rem(15)
+   }
 
    &::before {
       content: '';
@@ -12,11 +28,32 @@
       position: absolute;
       top: 0;
       left: 0;
+
+      @media (max-width:$tablet) {
+         display: none;
+      }
    }
 }
 
 .sidebar__img-ibg {
    padding-bottom: rem(454);
+
+   @media (max-width:$pc) {
+      padding-bottom: rem(347);
+      @include adaptiveValue("padding-bottom", 347, 340);
+   }
+
+   @media (max-width:$tablet) {
+      width: 315px;
+      height: 420px;
+   }
+
+   @media (max-width:625px) {
+      grid-column: 1/-1;
+      width: 315px;
+      height: 420px;
+      margin: 0 auto;
+   }
 }
 
 .info-sidebar {
@@ -25,19 +62,56 @@
    row-gap: rem(42);
    margin-bottom: rem(28);
 
+   @media (max-width:$tablet) {
+      flex-direction: row;
+      column-gap: rem(15);
+      row-gap: rem(60);
+      margin-bottom: rem(29);
+      grid-column: 1 / -1;
+   }
+
+   @media (max-width:$mobile) {
+      flex-wrap: wrap;
+      row-gap: rem(42);
+      @include adaptiveValue("row-gap", 42, 70);
+   }
+
    // .info-sidebar__item
    &__item {
       padding-bottom: rem(28);
       position: relative;
 
+      @media (max-width:$tablet) {
+         padding-bottom: rem(30);
+         flex: 0 1 50%;
+      }
+
+      @media (max-width:$mobile) {
+         flex: 1 1 100%;
+      }
+
       &::after {
          content: '';
          height: 1px;
-         width: 340px;
+         @include adaptiveValue("width", 340, 290);
          background: #EBECED;
          position: absolute;
          bottom: 0;
          right: 0;
+
+         @media (max-width:$pc) {
+            @include adaptiveValue("width", 257, 200);
+         }
+
+         @media (max-width:$tablet) {
+            width: 100%;
+         }
+      }
+
+      li {
+         @media (max-width:$tablet) {
+            margin-left: rem(18);
+         }
       }
    }
 
@@ -79,6 +153,15 @@
 .tags-sidebar {
    padding-top: rem(51);
 
+   @media (max-width:$tablet) {
+      padding: 0;
+   }
+
+   @media (max-width: 625px) {
+      padding-top: rem(60);
+      grid-column: 1/-1;
+   }
+
    // .tags-sidebar__title
    &__title {
       font-size: rem(24);
@@ -95,6 +178,10 @@
    padding-left: 0;
    line-height: math.div(22, 14);
    max-width: rem(272);
+
+   @media (max-width: 625px) {
+      max-width: 100%;
+   }
 
    li {
       display: inline;

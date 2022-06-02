@@ -21,48 +21,57 @@
 	<div class="header__main main-header">
 		<div class="main-header__container">
 			<a href="" class="main-header__logo">Company Name</a>
-			<nav>
-				<ul data-spollers data-one-spoller class="main-header__list spollers">
-					<li class="main-header__item spollers__item">
-						<div data-spoller data-spoller-close class="main-header__link spollers__title">
-							WHY US <img src="@img/icons/arrow-down.svg" alt="">
-						</div>
-						<div class="spollers__body">
-							<a href="">Just because</a>
-							<a href="">Just because</a>
-							<a href="">Just because</a>
-						</div>
-					</li>
-					<li class="main-header__item">
-						<a href="" class="main-header__link">
-							VPN APPS
-						</a>
-					</li>
-					<li class="main-header__item spollers__item">
-						<div data-spoller data-spoller-close class="main-header__link spollers__title">
-							SUPPORT <img src="@img/icons/arrow-down.svg" alt="">
-						</div>
-						<div class="spollers__body">
-							<a href="">Just because</a>
-							<a href="">Just because</a>
-							<a href="">Just because</a>
-						</div>
-					</li>
-					<li class="main-header__item spollers__item">
-						<div data-spoller data-spoller-close class="main-header__link spollers__title">
-							Resources <img src="@img/icons/arrow-down.svg" alt="">
-						</div>
-						<div class="spollers__body">
-							<a href="">Just because</a>
-							<a href="">Just because</a>
-							<a href="">Just because</a>
-						</div>
-					</li>
-				</ul>
-			</nav>
+
+
+			<div class="main-header__menu menu-main menu">
+				<button type="button" class="menu__icon icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<nav class="menu-main__body">
+					<ul data-spollers data-one-spoller class="main-header__list spollers menu__list">
+						<li class="main-header__item spollers__item menu__item">
+							<div data-spoller data-spoller-close class="main-header__link spollers__title">
+								WHY US <img src="@img/icons/arrow-down.svg" alt="">
+							</div>
+							<div class="spollers__body">
+								<a href="">Just because</a>
+								<a href="">Just because</a>
+								<a href="">Just because</a>
+							</div>
+						</li>
+						<li class="main-header__item menu__item">
+							<a href="" class="main-header__link">
+								VPN APPS
+							</a>
+						</li>
+						<li class="main-header__item spollers__item menu__item">
+							<div data-spoller data-spoller-close class="main-header__link spollers__title">
+								SUPPORT <img src="@img/icons/arrow-down.svg" alt="">
+							</div>
+							<div class="spollers__body">
+								<a href="">Just because</a>
+								<a href="">Just because</a>
+								<a href="">Just because</a>
+							</div>
+						</li>
+						<li class="main-header__item spollers__item menu__item">
+							<div data-spoller data-spoller-close class="main-header__link spollers__title">
+								Resources <img src="@img/icons/arrow-down.svg" alt="">
+							</div>
+							<div class="spollers__body">
+								<a href="">Just because</a>
+								<a href="">Just because</a>
+								<a href="">Just because</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</div>
-		<div class="main-header__buttons-group">
-			<button type="button" class="button">LOG IN</button>
+		<div class="main-header__buttons-group" data-da=".main-header__container, 1200">
+			<button data-da=".menu-main__body, 778" type="button" class="button">LOG IN</button>
 			<button type="button" class="button button-green">GET STARTED</button>
 		</div>
 	</div>
